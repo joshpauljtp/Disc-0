@@ -4,16 +4,18 @@ import AlbumList from "./AlbumList";
 import "./App.css";
 import disc0Logo from "./assets/disc-0.svg";
 import Player from "./Player";
+import { useRouter } from "./useRouter";
 
 function App() {
   const playerRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [selectedTrack, setSelectedTrack] = useState("");
-  const [showPlayer, setShowPlayer] = useState(false);
 
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+
+  const { navigate, path } = useRouter();
 
   const onReady = (event) => {
     playerRef.current = event.target;
@@ -77,8 +79,10 @@ function App() {
 
   const onSelectTrack = (s) => {
     setSelectedTrack(s);
-    setShowPlayer(true);
+    navigate(`/track/${s}`);
   };
+
+  const showPlayer = path.startsWith("/track/");
 
   return (
     <>

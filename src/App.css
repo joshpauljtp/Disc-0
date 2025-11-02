@@ -1,17 +1,24 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0.5rem;
+  overflow-x: hidden;
 }
 
 header {
   width: 100%;
   height: 2.5rem;
   overflow: hidden;
+  padding: 0.5rem 0 0 0.5rem;
 
   img {
     height: 100%;
+    position: relative;
+    z-index: 1;
   }
+}
+
+main {
+  padding: 0.5rem;
 }
 
 h1,
@@ -31,7 +38,7 @@ h6 {
   }
 
   .albumArt {
-    width: 93%;
+    width: 91%;
     position: absolute;
     top: 4.2%;
     left: 50%;

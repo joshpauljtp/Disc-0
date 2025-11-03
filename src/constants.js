@@ -1,6 +1,7 @@
 import albumAmericanIdiot from "./assets/albumAmericanIdiot.png";
 import albumCasiopea from "./assets/albumCasiopea.png";
 import albumDarkSideOfTheMoon from "./assets/albumDarkSideOfTheMoon.png";
+import albumLateNightTargetPractice from "./assets/albumLateNightTargetPractice.png";
 import albumMagdalene from "./assets/albumMagdalene.png";
 import albumRandomAccessMemories from "./assets/albumRandomAccessMemories.png";
 import albumRollingInTheDeep from "./assets/albumRollingInTheDeep.png";
@@ -268,7 +269,7 @@ export const ALBUM_LIST = [
   },
 
   {
-    img: albumRollingInTheDeep,
+    img: albumLateNightTargetPractice,
     title: "Late Night Target Practice",
     artist: "i got the wrong tattoo",
     year: "2025",

@@ -266,4 +266,18 @@ export const ALBUM_LIST = [
       { title: "cellophane", duration: "4:07", youtubeId: "YkLjqFpBh84" },
     ],
   },
+
+  {
+    img: albumRollingInTheDeep,
+    title: "Late Night Target Practice",
+    artist: "i got the wrong tattoo",
+    year: "2025",
+    tracks: [
+      {
+        title: "Late Night Target Practice",
+        duration: "4:56",
+        youtubeId: "potE2wGZqPk",
+      },
+    ],
+  },
 ];

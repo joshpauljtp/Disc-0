@@ -1,4 +1,5 @@
 import YouTube from "react-youtube";
+import { OVERRIDE_PLAY_ON_STARTUP } from "./constants";
 
 export default function HiddenYoutubePlayer({
   selectedTrack,
@@ -24,7 +25,7 @@ export default function HiddenYoutubePlayer({
     event.target.playVideo();
   };
 
-  if (!selectedTrack) return <></>;
+  if (!selectedTrack || OVERRIDE_PLAY_ON_STARTUP) return <></>;
   return (
     <YouTube
       videoId={selectedTrack}

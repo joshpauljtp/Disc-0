@@ -1,6 +1,7 @@
 import albumAmericanIdiot from "./assets/albumAmericanIdiot.png";
 import albumCasiopea from "./assets/albumCasiopea.png";
 import albumDarkSideOfTheMoon from "./assets/albumDarkSideOfTheMoon.png";
+import albumDemonDays from "./assets/albumDemonDays.png";
 import albumLateNightTargetPractice from "./assets/albumLateNightTargetPractice.png";
 import albumMagdalene from "./assets/albumMagdalene.png";
 import albumRandomAccessMemories from "./assets/albumRandomAccessMemories.png";
@@ -141,19 +142,6 @@ export const ALBUM_LIST = [
     ],
   },
   {
-    img: albumRollingInTheDeep,
-    title: "Rolling In The Deep",
-    artist: "Adele",
-    year: "2011",
-    tracks: [
-      {
-        title: "Rolling In The Deep",
-        duration: "3:48",
-        youtubeId: "bDtjO-R0QSo",
-      },
-    ],
-  },
-  {
     img: albumRandomAccessMemories, // adjust your image variable accordingly
     title: "Random Access Memories",
     artist: "Daft Punk",
@@ -235,6 +223,21 @@ export const ALBUM_LIST = [
     ],
   },
   {
+    hide: true,
+    img: albumRollingInTheDeep,
+    title: "Rolling In The Deep",
+    artist: "Adele",
+    year: "2011",
+    tracks: [
+      {
+        title: "Rolling In The Deep",
+        duration: "3:48",
+        youtubeId: "bDtjO-R0QSo",
+      },
+    ],
+  },
+  {
+    hide: true,
     img: albumMagdalene, // set your image variable accordingly
     title: "Magdalene",
     artist: "FKA twigs",
@@ -267,8 +270,8 @@ export const ALBUM_LIST = [
       { title: "cellophane", duration: "4:07", youtubeId: "YkLjqFpBh84" },
     ],
   },
-
   {
+    hide: true,
     img: albumLateNightTargetPractice,
     title: "Late Night Target Practice",
     artist: "i got the wrong tattoo",
@@ -279,6 +282,50 @@ export const ALBUM_LIST = [
         duration: "4:56",
         youtubeId: "potE2wGZqPk",
       },
+    ],
+  },
+  {
+    hide: true,
+    img: albumDemonDays,
+    title: "Demon Days",
+    artist: "Gorillaz",
+    year: "2005",
+    tracks: [
+      { title: "Intro", duration: "1:03", youtubeId: "c6oK14Pt9Qk" },
+      {
+        title: "Last Living Souls",
+        duration: "3:15",
+        youtubeId: "k7wIluiBvZE",
+      },
+      { title: "Kids with Guns", duration: "3:46", youtubeId: "VCkFSe3voRc" },
+      { title: "O Green World", duration: "4:32", youtubeId: "tMt_YXr90AM" },
+      { title: "Dirty Harry", duration: "3:44", youtubeId: "cLnkQAeMbIM" },
+      { title: "Feel Good Inc.", duration: "3:41", youtubeId: "HyHNuVaZJ-k" },
+      { title: "El Mañana", duration: "3:50", youtubeId: "hji4gBuOvIQ" },
+      {
+        title: "Every Planet We Reach Is Dead",
+        duration: "4:53",
+        youtubeId: "eevt2glBfMg",
+      },
+      {
+        title: "November Has Come",
+        duration: "2:41",
+        youtubeId: "IHqOsme3H_U",
+      },
+      { title: "All Alone", duration: "3:30", youtubeId: "[NEEDS_ID]" },
+      { title: "White Light", duration: "2:08", youtubeId: "[NEEDS_ID]" },
+      { title: "DARE", duration: "4:04", youtubeId: "[NEEDS_ID]" },
+      {
+        title: "Fire Coming Out of the Monkey's Head",
+        duration: "3:16",
+        youtubeId: "[NEEDS_ID]",
+      },
+      {
+        title: "Don't Get Lost in Heaven",
+        duration: "2:00",
+        youtubeId: "[NEEDS_ID]",
+      },
+      { title: "Demon Days", duration: "4:29", youtubeId: "[NEEDS_ID]" },
     ],
   },
 ];

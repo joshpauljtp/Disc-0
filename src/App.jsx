@@ -18,7 +18,6 @@ function App() {
   const { navigate, path } = useRouter();
 
   const onReadyCallback = (event) => {
-    console.log("READY CALLBACK", event);
     playerRef.current = event.target;
   };
 

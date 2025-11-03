@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { ALBUM_LIST } from "./constants";
 import Disc from "./Disc";
 import PlayerControls from "./PlayerControls";
@@ -27,6 +27,10 @@ export default function Player({ albumIndex, setSelected, ...rest }) {
     const trackIndex = path.split("/").pop();
     return trackIndex;
   }, [path, window.location.pathname]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="player">

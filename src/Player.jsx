@@ -1,47 +1,62 @@
-import albumThePolice from "./assets/albumThePolice.png";
+import { useMemo } from "react";
+import { ALBUM_LIST } from "./constants";
 import Disc from "./Disc";
+import PlayerControls from "./PlayerControls";
+import { useRouter } from "./useRouter";
 
-export default function Player({
-  togglePlay,
-  isPlaying,
-  duration,
-  progress,
-  handleSeek,
-}) {
-  const track = {
-    img: albumThePolice,
-    title: "Track TITLE",
-    artist: "TEST ARTIST",
-    year: "1999",
-    noOfTracks: 5,
-    tracks: [],
+export default function Player({ albumIndex, setSelected, ...rest }) {
+  const { navigate, path } = useRouter();
+
+  const album = useMemo(() => {
+    const index = albumIndex || window.location.pathname.split("/")[2];
+    return ALBUM_LIST[index];
+  }, [albumIndex, path]);
+
+  const onSelectTrack = (trackIndex) => {
+    const index = albumIndex || window.location.pathname.split("/")[2];
+    const youtubeId = album.tracks[trackIndex].youtubeId;
+    navigate(`/album/${index}/track/${youtubeId}`);
+    setSelected((prev) => ({
+      ...prev,
+      track: youtubeId,
+    }));
   };
 
-  return (
-    <div>
-      <Disc albumArt={track.img} showBackButton />
-      <h2>{track.title}</h2>
-      <h3>{track.artist}</h3>
+  const selectedTrack = useMemo(() => {
+    if (!path.includes("track")) return null;
+    const trackIndex = path.split("/").pop();
+    return trackIndex;
+  }, [path, window.location.pathname]);
 
-      <div className="flex gap-4 mt-3">
-        <div className="w-full mt-3">
-          <input
-            type="range"
-            min="0"
-            max={duration}
-            step="0.1"
-            value={progress}
-            onChange={handleSeek}
-            className="w-full accent-blue-500 cursor-pointer"
-          />
+  return (
+    <div className="player">
+      <Disc albumArt={album.img} showBackButton />
+      <div className="details">
+        <div className="mainDetails">
+          <h2>{album.title}</h2>
+          <h3>{album.artist}</h3>
+          <h4>
+            {album.year} • {album?.tracks?.length} tracks
+          </h4>
         </div>
-        <button
-          onClick={togglePlay}
-          className="px-4 py-2 bg-blue-600 rounded text-white font-semibold"
-        >
-          {isPlaying ? "Pause" : "Play"}
-        </button>
-        <button className="px-3 py-2 bg-gray-700 rounded">⏭</button>
+
+        <div>
+          {album?.tracks.map((track, index) => (
+            <div
+              key={index}
+              className="track"
+              onClick={() => onSelectTrack(index)}
+            >
+              <div>
+                <p>{track.title}</p>
+                <h5>{track.duration}</h5>
+              </div>
+              {selectedTrack === track.youtubeId && (
+                <PlayerControls {...rest} />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

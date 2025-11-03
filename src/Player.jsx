@@ -4,29 +4,21 @@ import Disc from "./Disc";
 import PlayerControls from "./PlayerControls";
 import { useRouter } from "./useRouter";
 
-export default function Player({ albumIndex, setSelected, ...rest }) {
-  const { navigate, path } = useRouter();
+export default function Player({ albumIndex, selected, setSelected, ...rest }) {
+  const { path } = useRouter();
 
   const album = useMemo(() => {
     const index = albumIndex || window.location.pathname.split("/")[2];
     return ALBUM_LIST[index];
-  }, [albumIndex, path]);
+  }, [albumIndex]);
 
   const onSelectTrack = (trackIndex) => {
-    const index = albumIndex || window.location.pathname.split("/")[2];
     const youtubeId = album.tracks[trackIndex].youtubeId;
-    navigate(`/album/${index}/track/${youtubeId}`);
     setSelected((prev) => ({
       ...prev,
       track: youtubeId,
     }));
   };
-
-  const selectedTrack = useMemo(() => {
-    if (!path.includes("track")) return null;
-    const trackIndex = path.split("/").pop();
-    return trackIndex;
-  }, [path, window.location.pathname]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,7 +47,7 @@ export default function Player({ albumIndex, setSelected, ...rest }) {
                 <p>{track.title}</p>
                 <h5>{track.duration}</h5>
               </div>
-              {selectedTrack === track.youtubeId && (
+              {selected.track === track.youtubeId && (
                 <PlayerControls {...rest} />
               )}
             </div>

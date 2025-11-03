@@ -63,7 +63,6 @@ function MainLogic() {
   const onSelectAlbum = (s) => {
     setSelected((p) => ({ ...p, album: s }));
     let path = `/album/${s}`;
-    if (selected.track) path += `/track/${selected.track}`;
     navigate(path);
   };
 
@@ -86,6 +85,7 @@ function MainLogic() {
             handleSeek={handleSeek}
             duration={duration}
             progress={progress}
+            selected={selected}
             setSelected={setSelected}
           />
         ) : (

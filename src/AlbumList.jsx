@@ -23,7 +23,6 @@ export default function AlbumList({ onSelectAlbum }) {
             start: "top top",
             end: "bottom top",
             scrub: true,
-            markers: true,
           },
         });
       });

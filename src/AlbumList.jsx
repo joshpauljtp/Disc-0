@@ -10,7 +10,13 @@ export default function AlbumList({ setSelectedTrack }) {
       artist: "TEST ARTIST",
       year: "1999",
       noOfTracks: 5,
-      youtubeId: "sI_PQZvz5js",
+      tracks: [
+        {
+          title: "Track 1",
+          duration: 5,
+          youtubeId: "sI_PQZvz5js",
+        },
+      ],
     },
     {
       img: albumDaftPunk,
@@ -18,7 +24,13 @@ export default function AlbumList({ setSelectedTrack }) {
       artist: "TEST ARTIST",
       year: "1999",
       noOfTracks: 5,
-      youtubeId: "sI_PQZvz5js",
+      tracks: [
+        {
+          title: "Track 1",
+          duration: 5,
+          youtubeId: "sI_PQZvz5js",
+        },
+      ],
     },
 
     {
@@ -27,7 +39,13 @@ export default function AlbumList({ setSelectedTrack }) {
       artist: "TEST ARTIST",
       year: "1999",
       noOfTracks: 5,
-      youtubeId: "sI_PQZvz5js",
+      tracks: [
+        {
+          title: "Track 1",
+          duration: 5,
+          youtubeId: "sI_PQZvz5js",
+        },
+      ],
     },
     {
       img: albumThePolice,
@@ -35,7 +53,13 @@ export default function AlbumList({ setSelectedTrack }) {
       artist: "TEST ARTIST",
       year: "1999",
       noOfTracks: 5,
-      youtubeId: "sI_PQZvz5js",
+      tracks: [
+        {
+          title: "Track 1",
+          duration: 5,
+          youtubeId: "sI_PQZvz5js",
+        },
+      ],
     },
     {
       img: albumThePolice,
@@ -43,13 +67,18 @@ export default function AlbumList({ setSelectedTrack }) {
       artist: "TEST ARTIST",
       year: "1999",
       noOfTracks: 5,
-      youtubeId: "sI_PQZvz5js",
+      tracks: [
+        {
+          title: "Track 1",
+          duration: 5,
+          youtubeId: "sI_PQZvz5js",
+        },
+      ],
     },
   ];
 
   const onClick = (id) => {
-    console.log("clicked");
-    setSelectedTrack(albumList[0].youtubeId);
+    setSelectedTrack(id);
   };
 
   return (
@@ -58,7 +87,7 @@ export default function AlbumList({ setSelectedTrack }) {
         <Disc
           albumArt={album.img}
           key={index}
-          onClick={() => onClick(album.youtubeId)}
+          onClick={() => onClick(album.tracks[0].youtubeId)}
         />
       ))}
     </>

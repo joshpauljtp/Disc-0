@@ -5,7 +5,11 @@ export default function Disc(props) {
   return (
     <div className="card" onClick={props.onClick}>
       <img src={DiscImage} alt="Disc-0" className="disc" />
-      {props.showBackButton && <span onClick={() => redirect("/")}>🡐</span>}
+      {props.showBackButton && (
+        <span onClick={() => redirect("/")}>
+          <i class="fa fa-arrow-left"></i>
+        </span>
+      )}
       <img src={props.albumArt} alt="" className="albumArt" />
     </div>
   );

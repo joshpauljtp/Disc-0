@@ -50,30 +50,13 @@ p {
 
   span {
     position: absolute;
-    bottom: 0.65rem;
+    bottom: 1.15rem;
     right: 0.75rem;
     color: black;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
   }
 }
-
-/* .card:nth-of-type(2) {
-  bottom: 200px;
-}
-
-.card:nth-of-type(3) {
-  bottom: 400px;
-}
-.card:nth-of-type(4) {
-  bottom: 600px;
-}
-.card:nth-of-type(5) {
-  bottom: 800px;
-}
-.card:nth-of-type(6) {
-  bottom: 1000px;
-} */
 
 .player {
   height: 100%;
@@ -82,7 +65,7 @@ p {
   .details {
     background-color: #fff;
     color: black;
-    padding: 0.5rem;
+    padding: 0.75rem 0.5rem;
     border-radius: 24px;
   }
   h3 {
@@ -105,7 +88,7 @@ p {
   border-top: 1px solid grey;
 
   .progressBar {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     grid-column: 1/3;
     background-color: #626262;
     height: 4px;
@@ -151,7 +134,7 @@ p {
 
     .fa-play {
       position: relative;
-      left: 2px;
+      left: 1px;
     }
   }
 }

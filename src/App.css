@@ -58,6 +58,20 @@ p {
   }
 }
 
+button.playButton {
+  appearance: none;
+  border: none;
+  background: #354c78;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
 .player {
   height: 100%;
   min-height: 90vh;
@@ -68,6 +82,7 @@ p {
     padding: 0.75rem 0.5rem;
     border-radius: 24px;
   }
+
   h3 {
     opacity: 0.8;
   }
@@ -78,6 +93,15 @@ p {
 
   .mainDetails {
     margin-bottom: 0.5rem;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+
+    button {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
 
@@ -117,20 +141,6 @@ p {
 
   .buttons {
     justify-self: end;
-
-    button {
-      appearance: none;
-      border: none;
-      background: #354c78;
-      cursor: pointer;
-      padding: 0.5rem;
-      color: white;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-    }
 
     .fa-play {
       position: relative;

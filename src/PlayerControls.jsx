@@ -11,10 +11,7 @@ export default function PlayerControls({
   return (
     <>
       <div className="buttons">
-        <button
-          onClick={togglePlay}
-          className="px-4 py-2 bg-blue-600 rounded text-white font-semibold"
-        >
+        <button onClick={togglePlay} className="playButton">
           <i className={`fa fa-${isPlaying ? "pause" : "play"}`} />
         </button>
       </div>

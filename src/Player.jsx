@@ -2,11 +2,8 @@ import { useEffect, useMemo } from "react";
 import { ALBUM_LIST } from "./constants";
 import Disc from "./Disc";
 import PlayerControls from "./PlayerControls";
-import { useRouter } from "./useRouter";
 
 export default function Player({ albumIndex, selected, setSelected, ...rest }) {
-  const { path } = useRouter();
-
   const album = useMemo(() => {
     const index = albumIndex || window.location.pathname.split("/")[2];
     return ALBUM_LIST[index];
@@ -24,16 +21,30 @@ export default function Player({ albumIndex, selected, setSelected, ...rest }) {
     window.scrollTo(0, 0);
   }, []);
 
+  const onMainPlayClick = () => {
+    if (
+      !selected.track ||
+      !album.tracks.some((t) => t.youtubeId === selected.track)
+    )
+      onSelectTrack(0);
+    rest.togglePlay();
+  };
+
   return (
     <div className="player">
       <Disc albumArt={album.img} showBackButton />
       <div className="details">
         <div className="mainDetails">
-          <h2>{album.title}</h2>
-          <h3>{album.artist}</h3>
-          <h4>
-            {album.year} • {album?.tracks?.length} tracks
-          </h4>
+          <div>
+            <h2>{album.title} </h2>
+            <h3>{album.artist}</h3>
+            <h4>
+              {album.year} • {album?.tracks?.length} tracks
+            </h4>
+          </div>
+          <button onClick={onMainPlayClick} className="playButton">
+            <i className={`fa fa-${rest.isPlaying ? "pause" : "play"}`} />
+          </button>
         </div>
 
         <div>

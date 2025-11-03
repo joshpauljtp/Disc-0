@@ -19,7 +19,7 @@ export default function Player({
 
   return (
     <div>
-      <Disc albumArt={track.img} />
+      <Disc albumArt={track.img} showBackButton />
       <h2>{track.title}</h2>
       <h3>{track.artist}</h3>
 
@@ -34,10 +34,6 @@ export default function Player({
             onChange={handleSeek}
             className="w-full accent-blue-500 cursor-pointer"
           />
-          {/* <div className="flex justify-between text-xs text-gray-400 mt-1">
-            <span>{formatTime(progress)}</span>
-            <span>{formatTime(duration)}</span>
-          </div> */}
         </div>
         <button
           onClick={togglePlay}

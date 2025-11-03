@@ -14,5 +14,9 @@ export function useRouter() {
     setPath(to);
   };
 
-  return { path, navigate };
+  const goBack = () => {
+    window.history.back();
+  };
+
+  return { path, navigate, goBack };
 }

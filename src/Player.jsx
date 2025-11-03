@@ -1,9 +1,11 @@
 import { useEffect, useMemo } from "react";
+import { useSearchParams } from "react-router";
 import { ALBUM_LIST } from "./constants";
 import Disc from "./Disc";
 import PlayerControls from "./PlayerControls";
 
 export default function Player({ albumIndex, selected, setSelected, ...rest }) {
+  const [search] = useSearchParams();
   const album = useMemo(() => {
     const index = albumIndex || window.location.pathname.split("/")[2];
     return ALBUM_LIST[index];
@@ -30,9 +32,11 @@ export default function Player({ albumIndex, selected, setSelected, ...rest }) {
     rest.togglePlay();
   };
 
+  const showBackButton = search.get("back") === "0" ? false : true;
+
   return (
     <div className="player">
-      <Disc albumArt={album.img} showBackButton />
+      <Disc albumArt={album.img} showBackButton={showBackButton} />
       <div className="details">
         <div className="mainDetails">
           <div>

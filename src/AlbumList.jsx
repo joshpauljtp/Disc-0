@@ -32,7 +32,7 @@ export default function AlbumList({ onSelectAlbum }) {
 
   return (
     <div ref={container}>
-      {ALBUM_LIST.map((album, index) => (
+      {ALBUM_LIST.filter((a) => a.hide !== true).map((album, index) => (
         <Disc
           albumArt={album.img}
           key={index}

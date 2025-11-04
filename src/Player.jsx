@@ -43,7 +43,8 @@ export default function Player({ albumIndex, selected, setSelected, ...rest }) {
             <h2>{album.title} </h2>
             <h3>{album.artist}</h3>
             <h4>
-              {album.year} • {album?.tracks?.length} tracks
+              {album.year} • {album?.tracks?.length} track
+              {album.tracks.length > 1 ? "s" : ""}
             </h4>
           </div>
           <button onClick={onMainPlayClick} className="playButton">

@@ -2,6 +2,7 @@ import albumAmericanIdiot from "./assets/albumAmericanIdiot.png";
 import albumCasiopea from "./assets/albumCasiopea.png";
 import albumDarkSideOfTheMoon from "./assets/albumDarkSideOfTheMoon.png";
 import albumDemonDays from "./assets/albumDemonDays.png";
+import albumHybridTheory from "./assets/albumHybridTheory.png";
 import albumLateNightTargetPractice from "./assets/albumLateNightTargetPractice.png";
 import albumMagdalene from "./assets/albumMagdalene.png";
 import albumRandomAccessMemories from "./assets/albumRandomAccessMemories.png";
@@ -285,7 +286,6 @@ export const ALBUM_LIST = [
     ],
   },
   {
-    hide: true,
     img: albumDemonDays,
     title: "Demon Days",
     artist: "Gorillaz",
@@ -312,20 +312,53 @@ export const ALBUM_LIST = [
         duration: "2:41",
         youtubeId: "IHqOsme3H_U",
       },
-      { title: "All Alone", duration: "3:30", youtubeId: "[NEEDS_ID]" },
-      { title: "White Light", duration: "2:08", youtubeId: "[NEEDS_ID]" },
-      { title: "DARE", duration: "4:04", youtubeId: "[NEEDS_ID]" },
+      { title: "All Alone", duration: "3:30", youtubeId: "VHhND-BkWdk" },
+      { title: "White Light", duration: "2:08", youtubeId: "P91kQ8ADh5Q" },
+      { title: "DARE", duration: "4:04", youtubeId: "uAOR6ib95kQ" },
       {
         title: "Fire Coming Out of the Monkey's Head",
         duration: "3:16",
-        youtubeId: "[NEEDS_ID]",
+        youtubeId: "LtQHIv2O8x0",
       },
       {
         title: "Don't Get Lost in Heaven",
         duration: "2:00",
-        youtubeId: "[NEEDS_ID]",
+        youtubeId: "1L0bdrrJegA",
       },
-      { title: "Demon Days", duration: "4:29", youtubeId: "[NEEDS_ID]" },
+      { title: "Demon Days", duration: "4:29", youtubeId: "LTJjQj6PkrY" },
+    ],
+  },
+  {
+    hide: true,
+    img: albumHybridTheory,
+    title: "Hybrid Theory (20th Anniversary Edition)",
+    artist: "Linkin Park",
+    year: "2020",
+    tracks: [
+      { title: "Papercut", duration: "3:04", youtubeId: "vjVkXlxsO8Q" },
+      { title: "One Step Closer", duration: "2:35", youtubeId: "4qlCC1GOwFw" },
+      { title: "With You", duration: "3:23", youtubeId: "YyahxJAYYfY" },
+      {
+        title: "Points of Authority",
+        duration: "3:20",
+        youtubeId: "jZSPAp8kCl4",
+      },
+      { title: "Crawling", duration: "3:29", youtubeId: "Gd9OhYroLN0" },
+      { title: "Runaway", duration: "3:03", youtubeId: "voS1wrD7NP4" },
+      { title: "By Myself", duration: "3:09", youtubeId: "wWBp-nlGX1o" },
+      { title: "In the End", duration: "3:36", youtubeId: "eVTXPUF4Oz4" },
+      {
+        title: "A Place for My Head",
+        duration: "3:04",
+        youtubeId: "3t2WkCudwfY",
+      },
+      { title: "Forgotten", duration: "3:14", youtubeId: "SZhARpRNAq8" },
+      {
+        title: "Cure for the Itch",
+        duration: "2:37",
+        youtubeId: "u6z5U83lfrQ",
+      },
+      { title: "Pushing Me Away", duration: "3:11", youtubeId: "Ve1LNJEIKUE" },
     ],
   },
 ];

@@ -286,6 +286,7 @@ export const ALBUM_LIST = [
     ],
   },
   {
+    hide: true,
     img: albumDemonDays,
     title: "Demon Days",
     artist: "Gorillaz",

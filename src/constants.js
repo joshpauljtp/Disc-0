@@ -2,6 +2,7 @@ import albumAmericanIdiot from "./assets/albumAmericanIdiot.png";
 import albumCasiopea from "./assets/albumCasiopea.png";
 import albumDarkSideOfTheMoon from "./assets/albumDarkSideOfTheMoon.png";
 import albumDemonDays from "./assets/albumDemonDays.png";
+import albumGhostInTheMachine from "./assets/albumGhostInTheMachine.png";
 import albumHybridTheory from "./assets/albumHybridTheory.png";
 import albumLateNightTargetPractice from "./assets/albumLateNightTargetPractice.png";
 import albumMagdalene from "./assets/albumMagdalene.png";
@@ -360,6 +361,50 @@ export const ALBUM_LIST = [
         youtubeId: "u6z5U83lfrQ",
       },
       { title: "Pushing Me Away", duration: "3:11", youtubeId: "Ve1LNJEIKUE" },
+    ],
+  },
+  {
+    hide: true,
+    img: albumGhostInTheMachine,
+    title: "Ghost in the Machine",
+    artist: "The Police",
+    year: "1981",
+    tracks: [
+      {
+        title: "Spirits in the Material World",
+        duration: "2:59",
+        youtubeId: "9Q73LMKKxbc",
+      },
+      {
+        title: "Every Little Thing She Does Is Magic",
+        duration: "4:22",
+        youtubeId: "aENX1Sf3fgQ",
+      },
+      { title: "Invisible Sun", duration: "3:44", youtubeId: "Y_9jXfGhd7U" },
+      {
+        title: "Hungry for You (J'aurais toujours faim de toi)",
+        duration: "2:52",
+        youtubeId: "PpvhHrP_My0",
+      },
+      { title: "Demolition Man", duration: "5:57", youtubeId: "vf7To6vdg7A" },
+      {
+        title: "Too Much Information",
+        duration: "3:43",
+        youtubeId: "yeZNfo1zvdU",
+      },
+      {
+        title: "Rehumanize Yourself",
+        duration: "3:10",
+        youtubeId: "RTXt93-jD4o",
+      },
+      {
+        title: "One World (Not Three)",
+        duration: "4:47",
+        youtubeId: "tlNELuINW2o",
+      },
+      { title: "Omegaman", duration: "2:48", youtubeId: "9mKLxttBgnc" },
+      { title: "Secret Journey", duration: "3:34", youtubeId: "Lotcmk3NAYI" },
+      { title: "Darkness", duration: "3:14", youtubeId: "uYpF3DhT8y4" },
     ],
   },
 ];
